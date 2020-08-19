@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en" style="padding-top: 80px;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Minesweeper</title>
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+
+    <script src="jquery/jquery.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+
+    <style>
+    
+        
+    
+        td{
+            border: 1px solid rgb(71, 73, 69);
+            width:50px;
+            height:50px;
+            text-align: center;
+            font-size: 28px;
+            text-emphasis-color: red;
+            text-decoration-color: red;
+            background: bisque;
+            
+            
+            
+        }
+        
+        .bomb{
+            background: rgb(58, 56, 56);
+        }
+        .flag{
+            background: purple;
+        }
+        .falseflag{
+            background:cornsilk;
+        }
+        .cleanground{
+            background: rgb(7, 100, 7);
+        }
+        .boom{
+            background: red;
+        }
+
+        td.contextmenu{
+            background: yellow;
+            color: black;
+        }
+
+    </style>
+    
+</head>
+
+<body style="background-color: rgb(16, 25, 139);">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Minesweeper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    
+
+    <main role="main">
+        <div class="container">
+            
+            <table id="grid" style="color:rgb(185, 151, 0)">
+               
+            </table>
+            
+        
+                    
+                 
+                
+            
+            <button class="btn btn-primary" id="resetButton">Reset</button>
+            
+            
+            
+        </div>
+        <div class="row justify-content-left large-spaced" style="margin-top:0px">
+        
+                
+             
+            </div>
+    </main>
+    <script>
+            var td = $( "td" ).first();
+        td.contextmenu(function(){
+            td.toggleClass("contextmenu");
+        });
+        
+            </script>
+
+    
+
+</body>
+
+</html>
